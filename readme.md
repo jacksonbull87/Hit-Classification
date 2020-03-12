@@ -7,7 +7,7 @@
 
 
 ## Data Collection
-    - The dataset consisted of 6400 songs that were collected using Spotify's API. I anaylized each class of song (Hit or Flop) using the following 15 audio features:
+    - The dataset consisted of 6400 songs that were collected using Spotify's API. I analyzed each class of song (Hit or Flop) using the following 15 audio features:
         1. Danceability
         2. Energy
         3. Loudness
