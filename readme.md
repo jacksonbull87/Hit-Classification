@@ -45,13 +45,20 @@
         - I converted the values for Key from an integer-based system to an music key notation (C, C-sharp, F minor, etc).
 
 ### Data Exploration
-    - After analyzing the distribution of my continuous variables, I noticed a difference in the variance between the two groups of songs. Just looking at Energy, Danceability, and Valence, the range of Hit songs appear to be much slimmer than non-hit songs. These insights are not groudbreaking, but nonetheless confirm the idea that pop songs are formulaic and have little varience.
-    - Another useful insight came from looking at the categorical variables. For instance, Hit songs tend to favor the key of C and being in a major scale, confirming that pop songs are generally more upbeat and positive.
+    - After analyzing the distribution of my continuous variables, 
+    I noticed a difference in the variance between the two groups of songs. 
+    Just looking at Energy, Danceability, and Valence, the range of Hit songs appear to be much slimmer than non-hit songs. These insights are not groudbreaking, but nonetheless confirm the idea 
+    that pop songs are formulaic and have little varience.
+    - Another useful insight came from looking at the categorical variables. 
+    For instance, Hit songs tend to favor the key of C and being in a major scale, 
+    confirming that pop songs are generally more upbeat and positive.
 
 
 
 ## Model & Results
-    -After training my data on severals models, my best F1 Score was achieved from an XGBoost model optimimized using GridsearchCV. Out of 831 actual hit songs from my test dataset, my model predicted 731 of those to be True Positives, 
+    -After training my data on severals models, my best F1 Score was achieved from an 
+    XGBoost model optimimized using GridsearchCV. Out of 831 actual hit songs from my test dataset, 
+    my model predicted 731 of those to be True Positives, 
     giving me a recall rate of 88%. And out of 890 songs that my model predicted to be Hits, 
     that caused muy precision rate to be 83%
     
