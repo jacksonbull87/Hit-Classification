@@ -1,6 +1,6 @@
 
 ## Project Goals
-    - The goal of this project is to predict which songs are 
+   - The goal of this project is to predict which songs are 
     classified as a "Hit" and which songs are classified as a "Flop'. 
     If the model is successfull, playlist curators and radio program directors 
     can use it as a tool to identify what music has the potential to appeal to a mainstream audience. 
@@ -66,15 +66,19 @@
 
 
 ## Model & Results
-   -After training my data on severals models, my best F1 Score was achieved from an 
-    XGBoost model optimimized using GridsearchCV. Out of 831 actual hit songs from my test dataset, 
-    my model predicted 731 of those to be True Positives, 
-    giving me a recall rate of 88%. And out of 890 songs that my model predicted to be Hits, 
-    that caused muy precision rate to be 83%
+### Final Model: XGBoost with GridsearchCV
+
+![](confusionmatrix.png)
+
+
+- After training my data on severals models, my best F1 Score was achieved from an 
+XGBoost model optimimized using GridsearchCV. Out of 831 actual hit songs from my test dataset, 
+my model predicted 731 of those to be True Positives, 
+giving me a recall rate of 88%. And out of 890 songs that my model predicted to be Hits, 
+that caused muy precision rate to be 83%
     
-    ![](confusion%20matrix.png)
     
-   - Feature importance also indicated favorability towards 'Speechiness' and 'Acousticness'. 
+- Feature importance also indicated favorability towards 'Speechiness' and 'Acousticness'. 
     Knowing that Hip Hop and Rap songs have increased in popularitiy over the past 10 years, 
     the slight lean towards a higher speechiness value makes sense. However, 
     further analysis on genre is needed to confirm this insight.
