@@ -38,7 +38,7 @@
                 - The track's genre must not have a song in the 'hit' list.
                 
 ## EDA
-![](valence.png) ![](danceability.png) ![](energy.png)
+![](/images/valence.png) ![](/images/danceability.png) ![](/images/energy.png)
 ### Data Cleaning
    - The dataset was already clean when I recieved it. There were no missing values or outliers that I had to handle. 
     I did look at all the variables to identify the continuous and categorical variables.
@@ -68,7 +68,7 @@
 ## Model & Results
 ### Final Model: XGBoost with GridsearchCV
 
-![](confusionmatrix.png)
+![](/images/confusionmatrix.png)
 
 - After comparing the F1 score for all of my models, I can conclude that combining GridsearchCV and XGBoost produced the best results for the goal of this project. When deciding which metric I should be evaluating my model on, the f1 score seemed most appropriate. When curating a music playlist for a massive audience, it's important to be able to have a model that recognizes as many hits as possible while also identifying the songs that may not fit and therefore cause the listener to disengage from the content. Out of 831 actual hit songs from my test dataset, 
 my model predicted 731 of those to be True Positives, 
