@@ -24,6 +24,8 @@
         13. Key
         14. Mode
         15. Time Signature
+   - For more information on how these features are measured, here's a link
+   to Spotify's API Documentation (https://developer.spotify.com/documentation/web-api/reference/tracks/get-audio-analysis/).
     
    - Target Variable consists of two evenly balanced classes:
         - Hit (has a value of 1)
