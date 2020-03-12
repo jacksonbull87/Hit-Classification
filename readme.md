@@ -27,18 +27,17 @@
     
    - Target Variable consists of two evenly balanced classes:
         - Hit (has a value of 1)
-            - A track is defined as a Hit if it was listed on the Billboard Hot 100 chart at least once between 2010 and 2019
+           - A track is defined as a Hit if it was listed on the Billboard Hot 100 chart at least once between 2010 and 2019
         
         - Flop (has value of 0)
-            - A track is defined as a flop if any one of the following criteria is true:
+           - A track is defined as a flop if any one of the following criteria is true:
                 - The track must not appear in the 'hit' list of that decade.
                 - The track's artist must not appear in the 'hit' list of that decade.
-                - The track must belong to a genre that could be considered non-mainstream and / or                     avant-garde.
+                - The track must belong to a genre that could be considered non-mainstream and/or 
+                avant-garde.
                 - The track's genre must not have a song in the 'hit' list.
                 
 ## EDA
-
-
 
 ### Data Cleaning
    - The dataset was already clean when I recieved it. There were no missing values or outliers that I had to handle. 
