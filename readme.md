@@ -24,9 +24,11 @@
         13. Key
         14. Mode
         15. Time Signature
+    
     - Target Variable consists of two evenly balanced classes:
         - Hit (has a value of 1)
             - A track is defined as a Hit if it was listed on the Billboard Hot 100 chart at least once between 2010 and 2019
+        
         - Flop (has value of 0)
             - A track is defined as a flop if any one of the following criteria is true:
                 - The track must not appear in the 'hit' list of that decade.
@@ -41,10 +43,13 @@
 ### Data Cleaning
     - The dataset was already clean when I recieved it. There were no missing values or outliers that I had to handle. 
     I did look at all the variables to identify the continuous and categorical variables.
-        - Categorical features are defined as any column that has less than 12 unique values 
+       
+       - Categorical features are defined as any column that has less than 12 unique values 
         (Key, Mode, Time Signature).
-        - Continuous features are all the others that have more than 12 unique values
-        - I converted the values for Key from an integer-based system to an music key notation 
+       
+       - Continuous features are all the others that have more than 12 unique values
+       
+       - I converted the values for Key from an integer-based system to an music key notation 
         (C, C-sharp, F minor, etc).
 
 ### Data Exploration
@@ -54,7 +59,8 @@
     the range of Hit songs appear to be much slimmer than non-hit songs. 
     These insights are not groudbreaking, but nonetheless confirm the idea 
     that pop songs are formulaic and have little varience.
-    - Another useful insight came from looking at the categorical variables. 
+   
+   - Another useful insight came from looking at the categorical variables. 
     For instance, Hit songs tend to favor the key of C and being in a major scale, 
     confirming that pop songs are generally more upbeat and positive.
 
