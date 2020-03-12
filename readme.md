@@ -72,6 +72,8 @@
     giving me a recall rate of 88%. And out of 890 songs that my model predicted to be Hits, 
     that caused muy precision rate to be 83%
     
+    ![](confusion matrix.png)
+    
    - Feature importance also indicated favorability towards 'Speechiness' and 'Acousticness'. 
     Knowing that Hip Hop and Rap songs have increased in popularitiy over the past 10 years, 
     the slight lean towards a higher speechiness value makes sense. However, 
