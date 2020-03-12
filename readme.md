@@ -66,13 +66,14 @@
 
 
 ## Model & Results
+
+![](confusionmatrix.png)
    -After training my data on severals models, my best F1 Score was achieved from an 
     XGBoost model optimimized using GridsearchCV. Out of 831 actual hit songs from my test dataset, 
     my model predicted 731 of those to be True Positives, 
     giving me a recall rate of 88%. And out of 890 songs that my model predicted to be Hits, 
     that caused muy precision rate to be 83%
     
-    ![](confusionmatrix.png)
     
    - Feature importance also indicated favorability towards 'Speechiness' and 'Acousticness'. 
     Knowing that Hip Hop and Rap songs have increased in popularitiy over the past 10 years, 
