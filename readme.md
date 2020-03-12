@@ -38,7 +38,7 @@
                 - The track's genre must not have a song in the 'hit' list.
                 
 ## EDA
-
+![](valence.png)
 ### Data Cleaning
    - The dataset was already clean when I recieved it. There were no missing values or outliers that I had to handle. 
     I did look at all the variables to identify the continuous and categorical variables.
