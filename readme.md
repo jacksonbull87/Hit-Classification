@@ -7,7 +7,7 @@
 
 
 ## Data Collection
-    - The dataset consisted of 6400 songs that were collected using Spotify's API. 
+   - The dataset consisted of 6400 songs that were collected using Spotify's API. 
     I analyzed each class of song (Hit or Flop) using the following 15 audio features:
         1. Danceability
         2. Energy
@@ -25,7 +25,7 @@
         14. Mode
         15. Time Signature
     
-    - Target Variable consists of two evenly balanced classes:
+   - Target Variable consists of two evenly balanced classes:
         - Hit (has a value of 1)
             - A track is defined as a Hit if it was listed on the Billboard Hot 100 chart at least once between 2010 and 2019
         
@@ -41,19 +41,19 @@
 
 
 ### Data Cleaning
-    - The dataset was already clean when I recieved it. There were no missing values or outliers that I had to handle. 
+   - The dataset was already clean when I recieved it. There were no missing values or outliers that I had to handle. 
     I did look at all the variables to identify the continuous and categorical variables.
        
-       - Categorical features are defined as any column that has less than 12 unique values 
+      - Categorical features are defined as any column that has less than 12 unique values 
         (Key, Mode, Time Signature).
        
-       - Continuous features are all the others that have more than 12 unique values
+      - Continuous features are all the others that have more than 12 unique values
        
-       - I converted the values for Key from an integer-based system to an music key notation 
+      - I converted the values for Key from an integer-based system to an music key notation 
         (C, C-sharp, F minor, etc).
 
 ### Data Exploration
-    - After analyzing the distribution of my continuous variables, 
+   - After analyzing the distribution of my continuous variables, 
     I noticed a difference in the variance between the two groups of songs. 
     Just looking at Energy, Danceability, and Valence, 
     the range of Hit songs appear to be much slimmer than non-hit songs. 
@@ -67,13 +67,13 @@
 
 
 ## Model & Results
-    -After training my data on severals models, my best F1 Score was achieved from an 
+   -After training my data on severals models, my best F1 Score was achieved from an 
     XGBoost model optimimized using GridsearchCV. Out of 831 actual hit songs from my test dataset, 
     my model predicted 731 of those to be True Positives, 
     giving me a recall rate of 88%. And out of 890 songs that my model predicted to be Hits, 
     that caused muy precision rate to be 83%
     
-    - Feature importance also indicated favorability towards 'Speechiness' and 'Acousticness'. 
+   - Feature importance also indicated favorability towards 'Speechiness' and 'Acousticness'. 
     Knowing that Hip Hop and Rap songs have increased in popularitiy over the past 10 years, 
     the slight lean towards a higher speechiness value makes sense. However, 
     further analysis on genre is needed to confirm this insight.
