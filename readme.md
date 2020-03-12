@@ -70,13 +70,10 @@
 
 ![](confusionmatrix.png)
 
-
-- After training my data on severals models, my best F1 Score was achieved from an 
-XGBoost model optimimized using GridsearchCV. Out of 831 actual hit songs from my test dataset, 
+- After comparing the F1 score for all of my models, I can conclude that combining GridsearchCV and XGBoost produced the best results for the goal of this project. When deciding which metric I should be evaluating my model on, the f1 score seemed most appropriate. When curating a music playlist for a massive audience, it's important to be able to have a model that recognizes as many hits as possible while also identifying the songs that may not fit and therefore cause the listener to disengage from the content. Out of 831 actual hit songs from my test dataset, 
 my model predicted 731 of those to be True Positives, 
 giving me a recall rate of 88%. And out of 890 songs that my model predicted to be Hits, 
 that caused muy precision rate to be 83%
-    
     
 - Feature importance also indicated favorability towards 'Speechiness' and 'Acousticness'. 
     Knowing that Hip Hop and Rap songs have increased in popularitiy over the past 10 years, 
