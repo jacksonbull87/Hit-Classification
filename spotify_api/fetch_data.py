@@ -17,3 +17,13 @@ def get_song_id(title, artist):
             song_id = results['tracks']['items'][i]['id']
     return song_id
 
+def get_audio_features(song_id):
+    #returns audio features: danceability, energy, key, loudness, mode, speechiness, acoustiness, 
+    # instrumentalness, livenes, valence, temo, duration, time_siganature
+    client = spotipy.SpotifyClientCredentials(client_id, client_secret)
+    s_client = spotipy.Spotify(client_credentials_manager=client)
+    features = s_client.audio_features(song_id)
+    feature_dict = features[0]
+    my_features = {key:value for key, value in feature_dict.items() if key not in ['type', 'id', 'uri', 'track_href','analysis_url']}
+    return my_features 
+
