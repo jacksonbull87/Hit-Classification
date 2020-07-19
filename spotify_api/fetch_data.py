@@ -1,6 +1,8 @@
 import sp_config
 import spotipy
 import re
+import numpy as np
+import pickle
 
 client_id = sp_config.my_dict['client_id']
 client_secret = sp_config.my_dict['client_secret']
@@ -38,3 +40,27 @@ def get_audio_analysis_feat(song_id):
     old_key = "start"
     my_analysis_dict[new_key] = my_analysis_dict.pop(old_key)
     return my_analysis_dict
+
+def agg_audio_feat_to_2darray(title, artist):
+    song_id = get_song_id(title, artist)
+
+    feat_dict = get_audio_features(song_id)
+
+    my_analysis_dict = get_audio_analysis_feat(song_id)
+
+    feat_dict.update(my_analysis_dict)
+
+    my_list = [feat_dict[k] for k,v in feat_dict.items()]
+
+    return np.array(my_list).reshape((1,15))
+
+
+
+def make_prediction(title, artist):
+    array = agg_audio_feat_to_2darray(title, artist)
+    with open('model.pkl', 'rb') as f:
+        model = pickle.load(f)
+    
+    prediction = model.predict(array)
+    
+    return prediction[0]
