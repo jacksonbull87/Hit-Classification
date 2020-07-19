@@ -1,22 +1,20 @@
-import pickle
+import flask
 from flask import Flask, render_template, request
-from Templates.forms import SongSubmitForm
+from spotify_api.fetch_data import *
 app = Flask(__name__)
-# app.config['SECRET_KEY'] = 'thecodex'
-
-# Loading the saved XGboost model pickle
-# model = open('model.pkl', 'rb')
-# model = pickle.load(model)
+app.config['SECRET_KEY'] = 'thecodex'
 
 
-@app.route('/')
+@app.route('/', methods=["POST"])
 def home():
-   return "<h1>Hit Predictor</h1>"
+   if request.form:
+      title = request.form['song_title']
+      artist = request.form['artist_name']
+      predictions = make_prediction(str(title), str(artist))
+      render_template('submission.html', prediction=predictions)
+      
+   return predictions
 
-@app.route('/submit')
-def submit():
-   form = SongSubmitForm()
-   return render_template('submission.html', form=form)
    
 
 if __name__ == '__main__':
