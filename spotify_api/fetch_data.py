@@ -58,9 +58,10 @@ def agg_audio_feat_to_2darray(title, artist):
 
 def make_prediction(title, artist):
     array = agg_audio_feat_to_2darray(title, artist)
-    with open('model.pkl', 'rb') as f:
-        model = pickle.load(f)
+    model = open('spotify_api/model.pkl', 'rb')
+    model = pickle.load(model)
     
     prediction = model.predict(array)
     
     return prediction[0]
+
