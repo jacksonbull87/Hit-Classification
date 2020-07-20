@@ -5,15 +5,19 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'thecodex'
 
 
-@app.route('/', methods=["POST"])
+@app.route('/')
 def home():
+   return render_template('submission.html')
+
+@app.route('/', methods=["GET", "POST"])
+def predict():
    if request.form:
       title = request.form['song_title']
       artist = request.form['artist_name']
-      predictions = make_prediction(str(title), str(artist))
-      render_template('submission.html', prediction=predictions)
+      output = make_prediction(str(title), str(artist))
       
-   return predictions
+      
+   return render_template('submission.html', prediction=output)
 
    
 
