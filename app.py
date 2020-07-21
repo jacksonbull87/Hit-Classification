@@ -7,19 +7,17 @@ app.config['SECRET_KEY'] = 'thecodex'
 
 @app.route('/')
 def home():
-   return render_template('submission.html')
+   return render_template('index.html')
 
 @app.route('/', methods=["GET", "POST"])
 def predict():
-   if request.form:
-      title = request.form['song_title']
-      artist = request.form['artist_name']
-      output = make_prediction(str(title), str(artist))
-      
-      
-   return render_template('submission.html', prediction=output)
-
+   title = request.form['song_title']
+   artist = request.form['artist_name']
+   output = make_prediction(title, artist)
    
+   return render_template('prediction.html', prediction=output)
+
+
 
 if __name__ == '__main__':
    app.run(debug=True)

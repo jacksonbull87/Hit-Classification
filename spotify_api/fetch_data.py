@@ -3,6 +3,9 @@ import spotipy
 import re
 import numpy as np
 import pickle
+import xgboost
+import sklearn
+from sklearn.preprocessing import LabelEncoder 
 
 client_id = sp_config.my_dict['client_id']
 client_secret = sp_config.my_dict['client_secret']
@@ -15,7 +18,6 @@ def get_song_id(title, artist):
 
     for i in range(len(results['tracks']['items'])):
         if re.match(title.lower(), results['tracks']['items'][i]['name'].lower()):
-            print(results['tracks']['items'][i]['name'])
             song_id = results['tracks']['items'][i]['id']
     return song_id
 
@@ -58,8 +60,7 @@ def agg_audio_feat_to_2darray(title, artist):
 
 def make_prediction(title, artist):
     array = agg_audio_feat_to_2darray(title, artist)
-    model = open('spotify_api/model.pkl', 'rb')
-    model = pickle.load(model)
+    model = pickle.load(open("spotify_api/model.pickle.dat", "rb"))
     
     prediction = model.predict(array)
     
