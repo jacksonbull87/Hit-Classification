@@ -7,8 +7,8 @@ import xgboost
 import sklearn
 from sklearn.preprocessing import LabelEncoder 
 
-client_id = sp_config.my_dict['client_id']
-client_secret = sp_config.my_dict['client_secret']
+client_id = 'fde423d9c3454b2b87726f5afab15cb4'
+client_secret = '9a5747edc5c043c8bed9c8ba3b04c6bf'
 
 def get_song_id(title, artist):
     client = spotipy.SpotifyClientCredentials(client_id, client_secret)
