@@ -8,12 +8,11 @@ itsdangerous==1.1.0
 Jinja2==2.11.2
 joblib==0.16.0
 MarkupSafe==1.1.1
-<<<<<<< HEAD
 # mkl-fft==1.0.15
 # mkl-random==1.1.1
 # mkl-service==2.3.0
 =======
->>>>>>> 31f9c5bd49f337cde779d8e8003c515b84cba608
+
 numpy==1.18.5
 requests==2.24.0
 scikit-learn==0.23.1
