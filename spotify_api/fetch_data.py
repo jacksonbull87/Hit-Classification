@@ -1,4 +1,3 @@
-import sp_config
 import spotipy
 import re
 import numpy as np
