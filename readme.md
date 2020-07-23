@@ -81,3 +81,10 @@ that caused muy precision rate to be 83%
     Knowing that Hip Hop and Rap songs have increased in popularitiy over the past 10 years, 
     the slight lean towards a higher speechiness value makes sense. However, 
     further analysis on genre is needed to confirm this insight.
+    
+
+## Deployment
+
+- Access a working model via the link below. IMPORTANT NOTE: Web App uses Spotify's API so if you submit a song that isn't available on the platform, then you will get an internal error.
+
+<div align="center"> https://hit-predictor.herokuapp.com/ </div>
