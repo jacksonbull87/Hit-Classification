@@ -13,7 +13,7 @@ def get_song_id(title, artist):
     client = spotipy.SpotifyClientCredentials(client_id, client_secret)
     s_client = spotipy.Spotify(client_credentials_manager=client)
     
-    results = s_client.search(q= artist.lower())
+    results = s_client.search(q= artist.lower(), limit=50)
 
     for i in range(len(results['tracks']['items'])):
         if re.match(title.lower(), results['tracks']['items'][i]['name'].lower()):
